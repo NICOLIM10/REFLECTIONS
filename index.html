@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyScript Reflection Template</title>
+    <!-- Include PyScript CSS and JS -->
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #800000; /* Maroon background */
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: white; /* White container */
+            border: 2px solid #b8860b; /* Gold border */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            color: #b8860b; /* Gold color for heading */
+            text-align: center; /* Center the heading */
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background: #fff7e6; /* Light gold background */
+            border: 1px solid #b8860b; /* Gold border */
+            color: #800000; /* Maroon text color */
+            white-space: pre-line; /* Ensures new lines are respected */
+        }
+        .name-grade {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #b8860b; /* Gold border */
+            border-radius: 5px;
+            background: #fff7e6; /* Light gold background */
+            color: #800000; /* Maroon text color */
+            font-weight: bold;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 20px auto; /* Centers the image */
+            width: 150px; /* Set image width */
+            border-radius: 10px; /* Optional: Adds rounded corners to the image */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="361424730_6965777286784410_3745697244253218774_n.jpg" alt="University Logo" class="logo">
+
+        <h1>Reflection</h1>
+        
+        <div class="name-grade">
+            Name: Francisco Nicolai E. Lim<br>
+            <br>
+            Grade/Section: BS-IT 1st YEAR
+        </div>
+
+        <div class="result" id="reflection_output"></div>
+    </div>
+
+    <py-script>
+        from pyscript import Element
+
+        # Reflection text using \ for new lines
+        reflection_text = "As a student in today’s digital age, I have become increasingly aware of the importance of data privacy and cybersecurity. " \
+            "The Data Privacy and Cyber Awareness Campaign has highlighted the significant risks associated with sharing personal information online and the steps I can take to protect myself. " \
+            "With the rapid growth of technology and the internet, I recognize that safeguarding my personal data has become a crucial responsibility.\n\n" \
+            "In the Philippines, where the online landscape is expanding rapidly, the Data Privacy Act of 2012 (Republic Act No. 10173) plays a vital role in protecting individuals' personal information. " \
+            "This act aims to protect the privacy of individuals while ensuring free flow of information for innovation and growth. " \
+            "As I engage more with online platforms for my education, social interactions, and daily activities, I realize how much of my data is at risk. " \
+            "The campaign has taught me about my rights as a data subject, including the right to be informed, the right to access my data, and the right to withdraw consent for data processing. " \
+            "Understanding these rights empowers me to take control of my personal information and make informed decisions about what I share online.\n\n" \
+            "One of the most significant lessons I’ve learned is to be cautious about the information I provide. " \
+            "When signing up for online services, joining educational platforms, or even interacting on social media, I must think critically about the data I disclose. " \
+            "For instance, I have become more selective about sharing my email address or personal details on unfamiliar websites. " \
+            "The campaign has made me aware that even seemingly harmless information can be used maliciously if it falls into the wrong hands. " \
+            "This knowledge has instilled a sense of responsibility in me to protect not only my data but also the data of my friends and family.\n\n" \
+            "Moreover, the rise of cybercrimes such as phishing attacks, identity theft, and online scams has made it clear that cyber awareness is essential. " \
+            "The campaign has educated me on recognizing potential threats and taking proactive measures to mitigate risks. " \
+            "For example, I have learned to identify phishing emails and suspicious links, which are common tactics used by cybercriminals. " \
+            "By understanding the signs of a scam, I can better protect myself and my personal information.\n\n" \
+            "The emphasis on creating strong passwords and using two-factor authentication has also become a vital part of my online security practices. " \
+            "I’ve started using unique passwords for different accounts and regularly updating them to enhance my security. " \
+            "The campaign has reinforced the idea that a small step, such as changing my password, can significantly reduce my vulnerability to cyber threats.\n\n" \
+            "Additionally, the Data Privacy Act of 2012 mandates that organizations must implement appropriate security measures to protect personal information. " \
+            "This includes the duty of care to protect data against unauthorized access, loss, or destruction. " \
+            "I now understand that my educational institution has a responsibility to protect my information, and I should hold them accountable to adhere to these data protection regulations. " \
+            "The promotion of a culture of privacy within educational environments fosters trust and encourages students like me to engage with digital tools confidently.\n\n" \
+            "In conclusion, the Data Privacy and Cyber Awareness Campaign has profoundly impacted my understanding of data privacy and cybersecurity. " \
+            "As a student navigating an increasingly digital world, I am now more equipped to protect my personal information and recognize the importance of cyber awareness. " \
+            "The knowledge I have gained from this campaign, grounded in the principles outlined in the Data Privacy Act of 2012, will not only benefit me in my academic pursuits but also in my everyday life. " \
+            "By being vigilant and proactive in safeguarding my data, I can contribute to a safer online environment for myself and those around me. " \
+            "As I move forward, I will carry these lessons with me, advocating for data privacy and encouraging my peers to do the same."
+
+        # Display the reflection output
+        Element("reflection_output").element.innerHTML = reflection_text
+    </py-script>
+</body>
+</html>
